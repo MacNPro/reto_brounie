@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorPrimary">#FF8F4F</color>
+    <color name="colorPrimaryDark">#FF8F4F</color>
+    <color name="colorAccent">#FFC74F</color>
+
+    //COLORES BASICOS
+    <color name="solid">#6D7896</color>
+    <color name="solid_soft">#B5BACA</color>
+    <color name="blanco">#ffffff</color>
+    <color name="fondo">#f8f8fe</color>
+
+    // GRISES
+    <color name="gris_50">#FAFAFA</color>
+    <color name="gris_100">#F5F5F5</color>
+    <color name="gris_200">#EEEEEE</color>
+    <color name="gris_300">#E0E0E0</color>
+    <color name="gris_400">#BDBDBD</color>
+    <color name="gris_500">#9E9E9E</color>
+    <color name="gris_600">#757575</color>
+    <color name="gris_700">#616161</color>
+    <color name="gris_800">#424242</color>
+    <color name="gris_900">#212121</color>
+
+    // PALETA DE COLORES
+    <color name="naranja">#FF8F4F</color>
+    <color name="amarillo">#FFC74F</color>
+    <color name="verde">#88D076</color>
+    <color name="fosfo">#12D89D</color>
+    <color name="cyan">#00D3C8</color>
+    <color name="azul">#3EBDFF</color>
+    <color name="azul_rey">#5092FF</color>
+    <color name="morado">#7A7CFF</color>
+    <color name="purpura">#B590FF</color>
+    <color name="rosa">#FF7DAB</color>
+    <color name="rojo">#FF6968</color>
+
+    // PALETA DE COLORES 50
+    <color name="naranja50">#50FF8F4F</color>
+    <color name="amarillo50">#50FFC74F</color>
+    <color name="verde50">#5088D076</color>
+    <color name="fosfo50">#5012D89D</color>
+    <color name="cyan50">#5000D3C8</color>
+    <color name="azul50">#503EBDFF</color>
+    <color name="azul_rey50">#505092FF</color>
+    <color name="morado50">#507A7CFF</color>
+    <color name="purpura50">#50B590FF</color>
+    <color name="rosa50">#50FF7DAB</color>
+    <color name="rojo50">#50FF6968</color>
+
 </resources>

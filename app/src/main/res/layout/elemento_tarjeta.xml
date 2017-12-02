@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/tarjeta"
+        android:elevation="2dp"
+        android:padding="22dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imagen"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="8dip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:orientation="vertical">
+
+            <io.llamas.retobrounie.CustomClasses.RalewaySemiBold
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Alemania"
+                android:textColor="@color/solid"
+                android:textSize="16sp" />
+
+            <io.llamas.retobrounie.CustomClasses.RalewaySemiBold
+                android:id="@+id/subtitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Berlín"
+                android:textColor="@color/solid_soft"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
