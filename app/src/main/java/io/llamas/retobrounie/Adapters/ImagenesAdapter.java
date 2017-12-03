@@ -53,6 +53,7 @@ public class ImagenesAdapter extends RecyclerView.Adapter<ImagenesAdapter.ViewHo
         final byte[] img = imagenes.get(position);
 
         Glide.with(context).load(img).asBitmap().error(R.drawable.error).into(holder.imagen);
+        setMargin(holder.imagen, position);
 
     }
 
@@ -71,21 +72,37 @@ public class ImagenesAdapter extends RecyclerView.Adapter<ImagenesAdapter.ViewHo
         int space12 = (int) Math.round(12 * density);
 
         boolean esPrimero = position == 0;
+        boolean esSegundo = position == 1;
         boolean esUltimo = position == imagenes.size() - 1;
+        boolean esPenultimo = position == imagenes.size() - 2;
+        boolean esIzquierda = position % 2 == 0;
+        boolean esDerecha = position % 2 == 1;
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
+                (int) Math.round(180 * density)
         );
 
-        if (esPrimero) {
+        if (esPenultimo && esIzquierda) {
+            params.setMargins(space12, space6, space6, space12);
+            view.setLayoutParams(params);
+        } else if (esUltimo && esIzquierda) {
+            params.setMargins(space12, space6, space6, space12);
+            view.setLayoutParams(params);
+        } else if (esUltimo && esDerecha) {
+            params.setMargins(space6, space6, space12, space12);
+            view.setLayoutParams(params);
+        } else if (esPrimero) {
             params.setMargins(space12, space12, space6, space6);
             view.setLayoutParams(params);
-        } else if (esUltimo) {
-            params.setMargins(space12, space6, space12, space12);
+        } else if (esSegundo) {
+            params.setMargins(space6, space12, space12, space6);
             view.setLayoutParams(params);
-        } else {
-            params.setMargins(space12, space6, space12, space6);
+        } else if (esIzquierda) {
+            params.setMargins(space12, space6, space6, space6);
+            view.setLayoutParams(params);
+        } else if (esDerecha) {
+            params.setMargins(space6, space6, space12, space6);
             view.setLayoutParams(params);
         }
     }

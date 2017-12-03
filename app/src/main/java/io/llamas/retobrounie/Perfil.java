@@ -74,7 +74,7 @@ public class Perfil extends Activity {
                 .error(R.drawable.error)
                 .into((ImageView) findViewById(R.id.imagen));
 
-        GridLayoutManager layoutManager = new GridLayoutManager(this, 1);
+        GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(new ImagenesAdapter(this, getFotos(ciudad.getId())));
@@ -200,7 +200,7 @@ public class Perfil extends Activity {
 
     public static byte[] getBytes(Bitmap bitmap) {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 0, stream);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 0, stream);
         return stream.toByteArray();
     }
 
