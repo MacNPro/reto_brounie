@@ -142,9 +142,7 @@ public class Perfil extends Activity {
                 cursor.moveToFirst();
                 for (int i = 0; i < cursor.getCount(); i++) {
 
-                    print("Index0: " + cursor.getInt(0));
-                    print("Index1: " + cursor.getInt(1));
-                    print("Index2: " + cursor.getBlob(2));
+                    imagenes.add(cursor.getBlob(cursor.getColumnIndex(ImagenEntry.COLUMN_DATA)));
 
                     if (i < cursor.getCount() - 1)
                         cursor.moveToNext();
@@ -194,6 +192,7 @@ public class Perfil extends Activity {
 
     private void createImagenEntry(SQLiteDatabase db, int cid, byte[] bytes) {
         ContentValues values = new ContentValues();
+        values.put(ImagenEntry._ID, System.currentTimeMillis());
         values.put(ImagenEntry.COLUMN_CIUDAD_ID, cid);
         values.put(ImagenEntry.COLUMN_DATA, bytes);
         db.insert(ImagenEntry.TABLE_NAME, null, values);

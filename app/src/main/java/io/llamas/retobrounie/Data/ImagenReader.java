@@ -17,7 +17,7 @@ public class ImagenReader extends SQLiteOpenHelper {
 
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + ImagenEntry.TABLE_NAME + " (" +
-                    ImagenEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    ImagenEntry._ID + " INTEGER," +
                     ImagenEntry.COLUMN_CIUDAD_ID + " INTEGER," +
                     ImagenEntry.COLUMN_DATA + " BLOB)";
 
