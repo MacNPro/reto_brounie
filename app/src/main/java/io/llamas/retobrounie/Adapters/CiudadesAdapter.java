@@ -72,6 +72,7 @@ public class CiudadesAdapter extends RecyclerView.Adapter<CiudadesAdapter.ViewHo
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(context, Perfil.class);
+                i.putExtra("Ciudad", c);
                 context.startActivity(i);
             }
         });

@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 public class Ciudad implements Serializable{
 
-    private String id;
+    private int id;
     private String nombre;
     private String pid;
     private String pais;
@@ -19,7 +19,7 @@ public class Ciudad implements Serializable{
     public Ciudad() {
     }
 
-    public Ciudad(String id, String nombre, String pid, String pais, String imagen, String latitude, String longitude) {
+    public Ciudad(int id, String nombre, String pid, String pais, String imagen, String latitude, String longitude) {
         this.id = id;
         this.nombre = nombre;
         this.pid = pid;
@@ -29,12 +29,12 @@ public class Ciudad implements Serializable{
         this.longitude = longitude;
     }
 
-    public String getId() {
-        return id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public int getId() {
+        return id;
     }
 
     public String getNombre() {
