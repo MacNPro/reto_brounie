@@ -101,7 +101,7 @@ public class Perfil extends Activity {
         findViewById(R.id.abrirEnMaps).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + ciudad.getLatitude() + "," + ciudad.getLongitude() + "?z=0(" + ciudad.getNombre() + ")");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + ciudad.getLatitude() + "," + ciudad.getLongitude() + "(" + ciudad.getNombre() + ")");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
@@ -181,7 +181,7 @@ public class Perfil extends Activity {
 
 
                 } catch (IOException e) {
-
+                    print(e.getMessage());
                 }
 
             }
@@ -200,12 +200,8 @@ public class Perfil extends Activity {
 
     public static byte[] getBytes(Bitmap bitmap) {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 0, stream);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 15, stream);
         return stream.toByteArray();
-    }
-
-    public static Bitmap getImage(byte[] image) {
-        return BitmapFactory.decodeByteArray(image, 0, image.length);
     }
 
     private Uri getOutputMediaFileUri(int mediaType) {
